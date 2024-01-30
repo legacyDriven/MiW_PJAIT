@@ -1,24 +1,31 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-def check_result(user_pick, ai_pick):
-    """Check the result of the game"""
+def check_result(user_pick, ai_pick):  # case insensitive implementation
+    # Normalizowanie do małych liter
+    user_pick = user_pick.lower()
+    ai_pick = ai_pick.lower()
+
     # draw
     if user_pick == ai_pick:
         print('Draw. \n')
         return 0
     # win
-    elif (user_pick == 'Rock' and ai_pick == 'Scissors') or \
-            (user_pick == 'Paper' and ai_pick == 'Rock') or \
-            (user_pick == 'Scissors' and ai_pick == 'Paper'):
+    elif (user_pick == 'rock' and ai_pick == 'scissors') or \
+            (user_pick == 'paper' and ai_pick == 'rock') or \
+            (user_pick == 'scissors' and ai_pick == 'paper'):
         print('You won: +1 point. \n')
         return 1
     # loss
-    elif (user_pick == 'Rock' and ai_pick == 'Paper') or \
-            (user_pick == 'Paper' and ai_pick == 'Scissors') or \
-            (user_pick == 'Scissors' and ai_pick == 'Rock'):
+    elif (user_pick == 'rock' and ai_pick == 'paper') or \
+            (user_pick == 'paper' and ai_pick == 'scissors') or \
+            (user_pick == 'scissors' and ai_pick == 'rock'):
         print('You lost: -1 point. \n')
         return -1
+    else:
+        print('Invalid input. \n')
+        return 0
+
 
 def learn(last_index, index):
     if index == 0 and (transition_matrix[last_index][0] - learning_rate / 2 >= 0 and
@@ -40,11 +47,13 @@ def learn(last_index, index):
         transition_matrix[last_index][1] -= learning_rate / 2
         transition_matrix[last_index][2] -= learning_rate / 2
 
-
 def get_index(index):
-    if index == 'Rock': return 0
-    elif index == 'Paper': return 1
-    elif index == "Scissors": return 2
+    if index.lower() == 'rock': return 0
+    elif index.lower() == 'paper': return 1
+    elif index.lower() == "scissors": return 2
+    else:
+        raise ValueError(f"Invalid input '{index}'. Expected 'Rock', 'Paper', or 'Scissors'.")
+
 
 def print_graph():
     plt.plot(all_points, color='green', linestyle='dashed', linewidth=3,
