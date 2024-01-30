@@ -78,3 +78,17 @@ def main():
 
 if __name__ == '__main__':
     main()  # Uruchomienie głównej funkcji
+
+
+# Dokładność:  0.7333333333333333
+'''
+Podejście z Prawdopodobieństwami: 
+To podejście oblicza prawdopodobieństwo przynależności próbki do każdej klasy 
+i wybiera klasę z najwyższym prawdopodobieństwem. 
+
+Jest to bardziej typowe w przypadku regresji logistycznej 
+i zwykle daje bardziej wyważone wyniki, ponieważ uwzględnia "pewność" modelu co do każdej z klas.
+
+Podejście z prawdopodobieństwami jest zwykle bardziej elastyczne i daje bardziej zrównoważone rezultaty, 
+szczególnie w sytuacjach, gdy klasy są nierównomiernie reprezentowane w danych.
+'''
