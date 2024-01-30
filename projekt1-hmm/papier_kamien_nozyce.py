@@ -52,3 +52,21 @@ plt.xlabel('Numer gry')  # Podpis osi x
 plt.ylabel('Stan kasy')  # Podpis osi y
 plt.title('Zmiana stanu kasy w grze "papier, kamień, nożyce"')
 plt.show()
+
+"""
+Ten program symuluje serię gier w "papier, kamień, nożyce", wykorzystując macierz przejścia do decydowania o ruchach. 
+Macierz przejścia jest aktualizowana w zależności od wyniku każdej gry. Kluczowe elementy programu to:
+
+1 Inicjalizacja Macierzy Przejścia: Na początku, program tworzy macierz przejścia o równych prawdopodobieństwach, sugerując, że początkowo każdy ruch (papier, kamień, nożyce) jest równie prawdopodobny.
+
+1 Funkcja update_transition_matrix: Ta funkcja aktualizuje macierz przejścia po każdej grze. Jeśli gracz przegra, prawdopodobieństwo wybranego ruchu wzrasta o 0.1, zachowując jednak całą macierz jako prawidłowo znormalizowaną.
+
+3 Funkcja play_rps: Funkcja symuluje grę, wybierając ruch na podstawie aktualnej macierzy przejścia i porównując go z ruchem przeciwnika. Zwraca wynik gry (wygrana, przegrana, remis) oraz wykonany ruch.
+
+4 Symulacja Gry i Aktualizacja Macierzy: Program symuluje serię gier (50), losowo wybierając ruch przeciwnika. Po każdej grze aktualizuje stan kasy i macierz przejścia.
+
+5 Wykres Stanu Kasy: Po symulacji, program rysuje wykres, który pokazuje, jak zmienia się stan kasy po każdej grze.
+
+Podsumowując, program symuluje dynamiczną grę w "papier, kamień, nożyce", 
+gdzie strategia gracza ewoluuje w czasie w oparciu o wyniki poprzednich gier.
+"""
