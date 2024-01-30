@@ -1,0 +1,8 @@
+1. Napisz program, uczący się gry “papier, kamień, nożyce”.
+Jako  algorytm uczący zastosuj łańcuch Markowa z macierzą przejść pomiędzy trzema stanami
+(Papier, Kamień, Nożyce). Nauka gry polega na korekcie macierzy przejść (prawdopodobieństwa warunkowe zmiany stanu),
+
+2. Wartość wypłaty: 1 w przypadku wygranej, −1 w przypadku przegranej i 0 w przypadku remisu,
+
+3. Przeprowadź ciąg kilkudziesięciu gier “kamień, papier, nożyce”.
+Sporządź wykres jak zmienia się stan kasy w każdym kroku gry.

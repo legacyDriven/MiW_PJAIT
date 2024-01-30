@@ -1,0 +1,11 @@
+1. Używając perceptronów napisz klasyfikator wielo-klasowy (klasyfikujący 3 lub więcej klas).
+Dla każdej z klas użyj klasyfikatora binarnego. Przykład klasyfikatora binarnego jest w pliku perceptron.py
+
+2. Napisz klasyfikator wielo-klasowy przy użyciu regresji logistycznej.
+Dla każdej z klas użyj klasyfikatora binarnego.
+Przykład regresji logistycznej  dla przypadku dwuklasowego jest w pliku reglog.py
+
+3. Dla regresji logistycznej napisz metodę wypisującą prawdopodobieństwo przynależności próbki
+(próbek) do danej klasy (klas).
+
+Proszę nie używać dostępnych w bibliotekach klasyfikatorów.
